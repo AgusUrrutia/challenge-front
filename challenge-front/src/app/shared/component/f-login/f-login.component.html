@@ -1,0 +1,34 @@
+<div id="form_login">
+    <p id="title">Portal de Monitoreo</p>
+    <p id="subtitle">Iniciar Sesión</p>
+    <form action="none" id="form">
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Luciano@email.com">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        
+        <div class="example-container">
+            <mat-form-field>
+              <mat-label>Enter your password</mat-label>
+              <input matInput [type]="hide() ? 'password' : 'text'" />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="clickEvent($event)"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide()"
+              >
+                <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+        </div>
+        <input type="password" name="password" id="password">
+        <div class="p_y_btn">
+            <a class="text_hypertext" href="#">¿Olvidaste tu contraseña?</a>
+            <button>Iniciar Sesión</button>
+        </div>
+    </form>
+    <p>Protegido por reCAPTCHA y sujeto a la <a class="text_hypertext">Politica de Privacidad</a> y <a class="text_hypertext">Condiciones.</a></p>
+</div>

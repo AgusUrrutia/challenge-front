@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="text_left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores autem magnam omnis eum similique deleniti vitae cum. Quisquam, a, quibusdam temporibus provident commodi nisi sint quam, blanditiis nemo maxime eveniet?
+    </div>
+
+
+    <div class="form_login_register">
+        <div *ngIf="currentUrl === '/login'" class="form_gral">
+            <app-f-login class="form_gral"></app-f-login>
+        </div>
+        <div *ngIf="currentUrl === '/register'" class="form_gral">
+            <app-f-register class="form_gral"></app-f-register>
+        </div>
+    </div>
+</div>
