@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.indicador{
+    padding: 20px;
+    width: 20%;
+    height: 80px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.indicadores {
+    width: 90%; 
+  }
+
+.cont_indicador{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.icon_indicador{
+    width: 25%;
+}
+.medidores{
+    width: 100%;
+}
+p{
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #8E8EA1;
+}
+.pisos{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}

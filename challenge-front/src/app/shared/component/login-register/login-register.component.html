@@ -1,15 +1,45 @@
 <div class="container">
-    <div class="text_left">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores autem magnam omnis eum similique deleniti vitae cum. Quisquam, a, quibusdam temporibus provident commodi nisi sint quam, blanditiis nemo maxime eveniet?
-    </div>
-
-
-    <div class="form_login_register">
-        <div *ngIf="currentUrl === '/login'" class="form_gral">
-            <app-f-login class="form_gral"></app-f-login>
+    <div class="gradient">
+        <div class="text_left">
+            <div class="cont_text">
+                <p class="title">Iniciar sesión</p>
+                <p class="subtitle">Nos alegra tenerte de vuelta y estamos listos para atender tus necesidades. Inicia sesión y continúa aprovechando al máximo nuestra plataforma.</p>
+                <div class="context">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0001 20V11H15.0001V4H22.0001L20.0001 9H22.0001L17.0001 20ZM15 13V20H3.99997C2.89997 20 1.99997 19.1 1.99997 18V15C1.99997 13.9 2.89997 13 3.99997 13H15ZM6.24984 15.75H4.74984V17.25H6.24984V15.75ZM12.9998 4V11H3.99976C2.89976 11 1.99976 10.1 1.99976 9V6C1.99976 4.9 2.89976 4 3.99976 4H12.9998ZM6.24984 6.75003H4.74984V8.25003H6.24984V6.75003Z" fill="#FFB84B"/>
+                    </svg>                    
+                    <div>
+                        <p>Monitoreo integral</p>
+                        <p>Administra, monitorea mutiples plantas de forma centralizada</p>
+                    </div>
+                </div>
+                <div class="context">
+                    <svg class="icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.98951 3.05176e-05C4.46951 3.05176e-05 -0.000488281 4.48003 -0.000488281 10C-0.000488281 15.52 4.46951 20 9.98951 20C15.5195 20 19.9995 15.52 19.9995 10C19.9995 4.48003 15.5195 3.05176e-05 9.98951 3.05176e-05ZM14.2298 16.0001L9.99981 13.4501L5.76981 16.0001L6.88981 11.1901L3.15981 7.96005L8.07981 7.54005L9.99981 3.00005L11.9198 7.53005L16.8398 7.95005L13.1098 11.1801L14.2298 16.0001Z" fill="#FFB84B"/>
+                        </svg>
+                                        
+                    <div>
+                        <p>Notificaciones en tiempo real</p>
+                        <p>Recibi notificaciones en tiempo real sobre las mediciones</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div *ngIf="currentUrl === '/register'" class="form_gral">
-            <app-f-register class="form_gral"></app-f-register>
+
+
+        <div class="form_login_register">
+            @if (currentUrl === '/login') {
+                <div class="form_gral">
+                
+                <app-f-login class="form_gral"></app-f-login>
+            </div>
+            }
+            @if (currentUrl === '/register') {
+                <div class="form_gral">
+                <app-f-register class="form_gral"></app-f-register>
+            </div>
+            }
+        
         </div>
     </div>
 </div>

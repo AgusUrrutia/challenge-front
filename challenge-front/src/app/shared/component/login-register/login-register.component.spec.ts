@@ -8,7 +8,7 @@ describe('LoginRegisterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginRegisterComponent ]
+      imports: [LoginRegisterComponent]
     })
     .compileComponents();
 

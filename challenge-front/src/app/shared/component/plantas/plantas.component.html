@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="plantas_title">
+        <p>Plantas</p>
+        <button mat-raised-button (click)="crearPlanta()">+  Crear nueva planta</button>
+    </div>
+    <div class="table_cont">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>País</th>
+                <th>Nombre de la Planta</th>
+                <th>Lecturas</th>
+                <th>Alertas Medias</th>
+                <th>Alertas Rojas</th>
+                <th class="last_column">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                @for (planta of plantas; track $index) {
+                    <tr>
+                        <td>{{planta.pais}}</td>
+                        <td>{{planta.nombre_de_planta}}</td>
+                        <td>{{planta.lecturas}}</td>
+                        <td>{{planta.alertas_medias}}</td>
+                        <td>{{planta.alertas_rojas}}</td>
+                        <td class="last_column">
+                            <button mat-icon-button (click)="editar(planta)" aria-label="Example icon button with a vertical three dot icon">
+                                <mat-icon>more_vert</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        
+    </div>
+</div>

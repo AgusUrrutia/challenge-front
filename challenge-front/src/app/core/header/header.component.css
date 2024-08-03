@@ -1,0 +1,26 @@
+.header{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: left;
+    color: #000000;
+    justify-content: space-between;
+}
+.icon_cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+.icon{
+    width: 20%;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+}

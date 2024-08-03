@@ -1,0 +1,16 @@
+.medidores{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.num_icon{
+    width: 20%;
+    display: flex;
+    align-items: center
+}
+.num_icon > p{
+    margin: 0;
+}
+.icon{
+    width: 40%;
+}

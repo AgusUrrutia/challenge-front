@@ -1,1 +1,47 @@
-<p>f-register works!</p>
+<div id="form_login">
+    <p id="title">Portal de Monitoreo</p>
+    <p id="subtitle">Registrarse</p>
+    <form action="none" id="form">
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Luciano@email.com" type="text">
+        </mat-form-field>
+        
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput [type]="hide() ? 'password' : 'text'" />
+            <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+            >
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Confirmar Contraseña</mat-label>
+            <input matInput [type]="hide() ? 'password' : 'text'" />
+            <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+            >
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        
+        <div class="p_y_btn">
+            <a class="text_hypertext" href="/login">¿Ya tienes un usuario? Ingresa</a>
+            <button mat-flat-button class="btn_iniciar">Registrarse</button>
+        </div>
+    </form>
+
+    <p class="m-t">Protegido por reCAPTCHA y sujeto a la <a class="text_hypertext">Politica de Privacidad</a> y <a class="text_hypertext">Condiciones.</a></p>
+</div>

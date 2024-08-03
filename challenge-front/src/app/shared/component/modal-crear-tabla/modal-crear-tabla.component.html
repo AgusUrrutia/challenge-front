@@ -1,0 +1,19 @@
+<div class="modal">
+    <div class="title_modal">
+        <p>Crear nueva planta</p>
+    </div>
+    <div class="cont_inputs">
+        <mat-form-field appearance="outline" class="inputs">
+            <mat-label>nombre_de_planta</mat-label>
+            <input matInput >
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputs">
+            <mat-label>pais</mat-label>
+            <input matInput >
+        </mat-form-field>
+    </div>
+    <div class="cont_btns">
+        <button mat-stroked-button (click)="dialogRef.close()">Cancelar </button>
+        <button type="submit" mat-flat-button>Crear</button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="modal">
+    <div class="title_modal">
+        <p>Editar planta</p>
+    </div>
+    <div>
+        <form action="none" id="form" [formGroup]="form" (ngSubmit)="onUpload()">
+            <div class="cont_input">
+                <mat-form-field appearance="outline" class="inputs">
+                    <mat-label>pais</mat-label>
+                    <input matInput  value="{{planta.pais}}">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inputs">
+                    <mat-label>nombre_de_planta</mat-label>
+                    <input matInput  value="{{planta.nombre_de_planta}}">
+                </mat-form-field>
+            </div>
+            <div class="cont_input">
+                <mat-form-field appearance="outline" class="inputs">
+                    <mat-label>lecturas</mat-label>
+                    <input matInput  value="{{planta.lecturas}}">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inputs">
+                    <mat-label>lecturas</mat-label>
+                    <input matInput  value="{{planta.lecturas}}">
+                </mat-form-field>
+            </div>
+            <div class="cont_input">
+                <mat-form-field appearance="outline" class="inputs">
+                    <mat-label>alertas_rojas</mat-label>
+                    <input matInput  value="{{planta.alertas_rojas}}">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inputs">
+                    <mat-label>alertas_medias</mat-label>
+                    <input matInput  value="{{planta.alertas_medias}}">
+                </mat-form-field>
+            </div>
+            <div class="cont_btns">
+                <button mat-stroked-button (click)="dialogRef.close()">Cancelar </button>
+                <button type="submit" mat-flat-button>Crear</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -36,3 +36,18 @@ p{
 a{
     text-decoration: none;
 }
+
+.mat-mdc-unelevated-button{
+    background-color: #33A3AA !important;
+    color: #FFFFFF !important;
+}
+
+.p_y_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.m-t{
+    margin-top: 20px;
+}
+

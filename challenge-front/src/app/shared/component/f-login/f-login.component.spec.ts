@@ -8,7 +8,7 @@ describe('FLoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FLoginComponent ]
+      imports: [FLoginComponent]
     })
     .compileComponents();
 
