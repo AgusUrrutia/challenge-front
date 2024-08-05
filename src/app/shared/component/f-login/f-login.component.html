@@ -1,28 +1,36 @@
 <div id="form_login">
+
+    <div class="cont_logo">
+        <svg class="logo" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0618 10.0087L15.2833 0L0 26.4715H11.557L21.0618 10.0087Z" fill="#ECECEC"/>
+            <path d="M23.7229 8.05719L34.3548 26.4722H13.091L23.7229 8.05719Z" fill="#ECECEC"/>
+            <path d="M13.4734 22.75C14.8186 20.4167 18.1814 20.4167 19.5266 22.75C20.8717 25.0833 19.1903 28 16.5 28C13.8097 28 12.1283 25.0833 13.4734 22.75Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.622 23.4141C13.7873 24.862 14.8306 26.6718 16.5 26.6718C18.1694 26.6718 19.2127 24.862 18.378 23.4141C17.5433 21.9662 15.4566 21.9662 14.622 23.4141ZM19.5266 22.75C18.1814 20.4167 14.8186 20.4167 13.4734 22.75C12.1283 25.0833 13.8097 28 16.5 28C19.1903 28 20.8717 25.0833 19.5266 22.75Z" fill="#09050D"/>
+        </svg>    
+    </div>
+
     <p id="title">Portal de Monitoreo</p>
     <p id="subtitle">Iniciar Sesión</p>
     <form action="none" id="form" [formGroup]="form" (ngSubmit)="onUpload()">
         
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="Luciano@email.com" type="text" formControlName="email">
-            @if (form.get('email')?.invalid && form.get('email')?.touched) {
-                <div>
-                    @if (form.get('email')?.errors?.['required']) {
-                        <mat-error>
-                            El titulo es requerido
-                        </mat-error>
-                    }
-                    
-                </div>
-            }
-            
+            <input
+            matInput
+            placeholder="pat@example.com"
+            formControlName="email"
+            (blur)="updateErr()"
+            required
+            />
+            @if (email.invalid) {
+                <mat-error>{{errEmail()}}</mat-error>
+              }
         </mat-form-field>
         
         
         <mat-form-field appearance="outline">
             <mat-label>Contraseña</mat-label>
-            <input matInput [type]="hide() ? 'password' : 'text'" formControlName="password"/>
+            <input matInput [type]="hide() ? 'password' : 'text'" formControlName="password"  (blur)="updateErr()" required/>
             <button
             mat-icon-button
             matSuffix
@@ -32,18 +40,11 @@
             >
             <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-            @if (form.get('password')?.invalid && form.get('password')?.touched) {
-                <div>
-                    @if (form.get('password')?.errors?.['required']) {
-                        <mat-error>
-                            El titulo es requerido
-                        </mat-error>
-                    }
-                    
-                </div>
+            @if (password.invalid) {
+                <mat-error>{{errPass()}}</mat-error>
             }
         </mat-form-field>
-        
+        <p class="errmsg">{{error}}</p>
         <div class="p_y_btn">
             <a class="text_hypertext" href="/register">¿Olvidaste tu contraseña?</a>
             <button type="submit" mat-flat-button class="btn_iniciar">Iniciar Sesión</button>

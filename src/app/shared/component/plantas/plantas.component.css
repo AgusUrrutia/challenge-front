@@ -7,7 +7,9 @@
     margin-top: 50px;
     padding-top: 30px;
 }
-
+.d-none-pc{
+    display: none;
+}
 .plantas_title{
     font-family: Poppins;
     font-size: 16px;
@@ -20,6 +22,7 @@
     width: 30%;
 }
 .table_cont{
+    font-family: Poppins;
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -30,7 +33,6 @@
 }
 .table > thead{
     color: #B0CAD1;
-    font-family: Poppins;
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
@@ -39,3 +41,70 @@
 .last_column{
     text-align: center;
 }
+.data{
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: left;
+}
+.planta_pais{
+    margin-bottom: 0px;
+}
+.flag{
+    width: 20px;
+    height: 15px;
+}
+.first_column{
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    .thead{
+        display: none;
+    }
+    .btn_crear_planta{
+        display: none;
+    }
+    .d-none{
+        display: none;
+    }
+    .d-none-pc{
+        display: block;
+    }
+    .table_cont{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .last_column{
+        text-align: end;
+    }
+    .data{
+        width: 15%;
+        color: #D70000;
+        font-size: 20px;
+        text-align: center;
+    }
+    .planta_pais{
+        margin-bottom: 12px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .planta_nombre{
+        color: #848484;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

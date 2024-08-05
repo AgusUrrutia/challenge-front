@@ -9,7 +9,9 @@
     flex-direction: column;
     justify-content: center;
 }
-
+.cont_logo{
+    display: none;
+}
 .text_hypertext{
     color: #33A3AA;
     font-size: 12px;
@@ -51,3 +53,47 @@ a{
     margin-top: 20px;
 }
 
+mat-form-field{
+    margin-top: 5px;
+}
+
+.errmsg{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    color: #D70000;
+}
+@media only screen and (max-width: 768px) {
+    .cont_logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 80px;
+    }
+    #form{
+        height: 60%;
+        margin-top: 80px;
+    }
+    .logo{
+        width: 40%;
+    }
+    #title{
+        display: none;
+    }
+    #form_login{
+        text-align: center;
+        height: 100%;
+    }
+    .text_hypertext, .m-t{
+        display: none;
+    }
+    .btn_iniciar{
+        width: 100%;
+    }
+    .p_y_btn{
+        align-items: end;
+        margin-top: auto;
+    }
+    
+}

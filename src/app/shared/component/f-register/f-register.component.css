@@ -50,4 +50,10 @@ a{
 .m-t{
     margin-top: 20px;
 }
+.errmsg{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    color: #D70000;
+}
 

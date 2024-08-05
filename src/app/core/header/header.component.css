@@ -10,6 +10,9 @@
     color: #000000;
     justify-content: space-between;
 }
+.icon_menu,.icon_logo{
+    display: none;
+}
 .icon_cont{
     display: flex;
     align-items: center;
@@ -23,4 +26,36 @@
     display: flex;
     justify-content: flex-end;
     width: 30%;
+}
+@media only screen and (max-width: 768px) {
+    
+    .title{
+        display: none;
+    }
+    .nombre{
+        display: none;
+    }
+    .menu{
+        width: 100%;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .d-none{
+        display: none;
+    }
+    .icon_menu,.icon_logo{
+        display: block;
+    }
+    .icon_logo{
+        width: 20%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .icon_cont{
+        width: 20%;
+    }
+    .icon{
+        width: 30%;
+    }
 }

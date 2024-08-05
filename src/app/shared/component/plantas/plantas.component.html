@@ -1,12 +1,12 @@
 
 <div class="container">
     <div class="plantas_title">
-        <p>Plantas</p>
-        <button mat-raised-button (click)="crearPlanta()">+  Crear nueva planta</button>
+        <p id="platas_title_t">Plantas</p>
+        <button mat-raised-button (click)="abrirModalCrearPlanta()" class="btn_crear_planta">+  Crear nueva planta</button>
     </div>
     <div class="table_cont">
         <table class="table">
-            <thead>
+            <thead class="thead">
               <tr>
                 <th>País</th>
                 <th>Nombre de la Planta</th>
@@ -19,13 +19,20 @@
             <tbody>
                 @for (planta of plantas; track $index) {
                     <tr>
-                        <td>{{planta.pais}}</td>
-                        <td>{{planta.nombre_de_planta}}</td>
-                        <td>{{planta.lecturas}}</td>
-                        <td>{{planta.alertas_medias}}</td>
-                        <td>{{planta.alertas_rojas}}</td>
+                        <td >
+                            <div class="first_column">
+                                <img class="flag" [src]="planta.flag" [alt]="planta.nombre_de_planta">
+                                
+                                <p class="planta_pais">{{planta.pais}}</p><p class="d-none-pc planta_nombre">{{planta.nombre_de_planta}}</p>
+                            </div>
+                        </td>
+                            
+                        <td class="d-none">{{planta.nombre_de_planta}}</td>
+                        <td class="data">{{planta.lecturas}}</td>
+                        <td class="data">{{planta.alertas_medias}}</td>
+                        <td class="data">{{planta.alertas_rojas}}</td>
                         <td class="last_column">
-                            <button mat-icon-button (click)="editar(planta)" aria-label="Example icon button with a vertical three dot icon">
+                            <button mat-icon-button (click)="abrirModalEditarPlanta(planta)">
                                 <mat-icon>more_vert</mat-icon>
                             </button>
                         </td>

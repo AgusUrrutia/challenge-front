@@ -4,13 +4,18 @@
     </div>
     <div class="cont_inputs">
         <mat-form-field appearance="outline" class="inputs">
-            <mat-label>nombre_de_planta</mat-label>
+            <mat-label>Nombre de planta</mat-label>
             <input matInput >
         </mat-form-field>
-        <mat-form-field appearance="outline" class="inputs">
-            <mat-label>pais</mat-label>
-            <input matInput >
-        </mat-form-field>
+        <mat-form-field>
+            <mat-select required>
+              <mat-option>-- None --</mat-option>
+              <mat-option value="option">Argentina</mat-option>
+              <mat-option value="option">Brazil</mat-option>
+              <mat-option value="option">Urugüay</mat-option>
+            </mat-select>
+            <mat-label><strong>Pais</strong></mat-label>
+          </mat-form-field>
     </div>
     <div class="cont_btns">
         <button mat-stroked-button (click)="dialogRef.close()">Cancelar </button>

@@ -13,3 +13,8 @@
     display: flex;
     justify-content: center;
 }
+@media only screen and (max-width: 768px) {
+    .indicadores{
+        display: none;
+    }
+}
