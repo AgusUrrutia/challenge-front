@@ -8,7 +8,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class AuthService {
   private readonly SESSION_COOKIE = 'userSession'; 
-  apiUrl: string = "http://localhost:3000";
+  apiUrl: string = "https://challenge-back-8v3c.onrender.com";
 
   constructor(private cookieService: CookieService, private http: HttpClient) {}
 

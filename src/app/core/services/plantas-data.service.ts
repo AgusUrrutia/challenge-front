@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Planta } from '../../interfaces/planta';
 import { AuthService } from './auth.service';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlantasDataService {
-  apiUrl: string = "http://localhost:3000";
+  apiUrl: string = "https://challenge-back-8v3c.onrender.com";
   apiUrlPaises: string = "https://restcountries.com/v3.1/name/"
   
   constructor(private cookieService: CookieService, private http: HttpClient, private auth: AuthService) {}
@@ -26,5 +26,10 @@ export class PlantasDataService {
   private getToken(): string {
     return this.auth.getSessionData()?.token || "";
   }
-
+  postPlanta(formData: FormData): Observable<any> {
+    let headers = new HttpHeaders({
+      'x-auth-token': this.getToken(),
+    });
+    return this.http.post<any>(`${this.apiUrl}/challenge-au/planta`, formData, { headers });
+  }
 }

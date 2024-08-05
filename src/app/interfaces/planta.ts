@@ -2,8 +2,8 @@ export interface Planta {
     id : String,
     pais : string,
     nombre_de_planta : String,
-    lecturas : Number,
-    alertas_medias : Number,
-    alertas_rojas : Number,
+    lecturas : number,
+    alertas_medias : number,
+    alertas_rojas : number,
     flag?: String,
 }

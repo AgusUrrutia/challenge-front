@@ -2,21 +2,33 @@
     <div class="title_modal">
         <p>Crear nueva planta</p>
     </div>
-    <div class="cont_inputs">
-        <mat-form-field appearance="outline" class="inputs">
-            <mat-label>Nombre de planta</mat-label>
-            <input matInput >
+    <form [formGroup]="form" (ngSubmit)="onUpload()" class="cont_inputs">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre de Planta</mat-label>
+            <input
+            matInput
+            placeholder="pat@example.com"
+            formControlName="nombre_de_planta"
+            (blur)="updateErr()"
+            required
+            />
+            @if (nombre_de_planta.invalid) {
+                <mat-error>{{errPlantaName()}}</mat-error>
+              }
         </mat-form-field>
         <mat-form-field>
-            <mat-select required>
+            <mat-select required formControlName="pais">
               <mat-option>-- None --</mat-option>
               <mat-option value="option">Argentina</mat-option>
               <mat-option value="option">Brazil</mat-option>
               <mat-option value="option">Urugüay</mat-option>
             </mat-select>
             <mat-label><strong>Pais</strong></mat-label>
+            @if (pais.invalid) {
+                <mat-error>{{errPais()}}</mat-error>
+              }
           </mat-form-field>
-    </div>
+        </form>
     <div class="cont_btns">
         <button mat-stroked-button (click)="dialogRef.close()">Cancelar </button>
         <button type="submit" mat-flat-button>Crear</button>

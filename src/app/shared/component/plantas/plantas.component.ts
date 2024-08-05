@@ -44,23 +44,18 @@ export class PlantasComponent implements OnInit {
   }
   getPais() {
     this.plantaService.getAll().subscribe((plantas) => {
-      this.plantas = plantas; // O la asignación que necesites
-  
-      // Extrae los nombres de los países de las plantas
+      this.plantas = plantas;
       const paises = [...new Set(this.plantas.map(planta => planta.pais))];
   
-      // Llama a la API para cada país
       paises.forEach(pais => {
         this.plantaService.getCountrie(pais).subscribe((data) => {
-          const flag = data[0]?.flags?.svg || 'default_flag_url'; // Asume que la API devuelve un array
-  
-          // Actualiza las plantas con la bandera correspondiente
+          const flag = data[0]?.flags?.svg || 'default_flag_url';
           this.plantas = this.plantas.map(planta => ({
             ...planta,
             flag: planta.pais === pais ? flag : planta.flag
           }));
   
-          console.log(this.plantas);
+          
         });
       });
     });
